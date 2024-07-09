@@ -28,8 +28,8 @@ jobs:
     - name: Build and push the Docker image
       uses: docker/build-push-action@v4
       with:
-         context: ./dockerize-nextapp
-         file: ./Dockerfile
+         context: dockerize-nextapp
+         file: dockerize-nextapp/Dockerfile
          push: true
          tags: ${{secrets.DOCKERHUB_USERNAME}}/next-app:latest     
       
